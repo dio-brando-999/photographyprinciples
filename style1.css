@@ -1,0 +1,440 @@
+body {
+  background-color: rgb(192, 149, 255);
+  color: #000000;
+
+  font-variant-numeric: inter;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+
+  -webkit-hyphenate-limit-line: 2;
+
+  hyphenate-limit-chars: 7 3 3;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  transition: background-color 0.3s ease;
+}
+p {
+  line-height: 12;
+  font-size: 30px;
+}
+br {
+  line-height: 200%;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:focus {
+  text-decoration: none;
+  background: transparent;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  /*background: #000000;*/
+  transition-duration: 0.5s;
+}
+.question {
+  font-family: inter;
+  font-size: 24px;
+  font-weight: 300;
+  color: rgb(164, 191, 233);
+  height: 40px;
+}
+
+.linkContainer {
+  /* css for hyperlinks to bring you to different pages*/
+  /* fix this so it can interact with the dimensions of the window and isn't set to a specific px size (it doesn't fit a smaller window)*/
+  font-size: 8px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 30px;
+}
+.quote {
+  font-family: inter;
+  color: white;
+  height: flex;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+.container {
+  margin: 40px auto 40px auto;
+  max-width: 680px;
+  min-width: 375px;
+  padding: 0 25px 0 25px;
+}
+.theDarkRoom {
+  margin: 0cap;
+  margin-top: 850px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.theDarkRoom::before {
+  content: "a room with no light or with a safelight for developing light-sensitive photographic materials like film or photographic paper. "; /*https://developer.mozilla.org/en-US/docs/Web/CSS/content */
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  background-color: #000;
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  border: 2px solid #fff;
+}
+
+.theDarkRoom:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  padding-top: 2em;
+}
+
+a {
+  font-family: Inter;
+  font-weight: 100;
+  font-style: bold;
+  font-size: 20px;
+}
+
+h1 {
+  font-family: inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  margin-bottom: 60px;
+  padding-top: 40px;
+}
+
+h2 {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
+  text-indent: 2em;
+}
+h3 {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
+  text-indent: 2em;
+  color: white;
+}
+
+h4 {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
+  text-indent: 2em;
+  color: rgb(211, 187, 49);
+}
+.audio-text {
+  cursor: pointer;
+}
+
+.audio-element {
+  display: none;
+}
+
+.image_captions {
+  font-family: inter;
+  font-size: 13px;
+  font-weight: medium;
+  margin-bottom: 40px;
+  color: rgb(184, 182, 194);
+}
+.theDarkRoomHeaderText {
+  font-family: inter;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 35px;
+  margin-bottom: 60px;
+  padding-top: 40px;
+  color: orange;
+}
+.container {
+  position: relative;
+  font-family: Inter;
+}
+.text {
+  /* .text is used for the "hover over image" effect (overlay) */
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: Inter;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 99.5%;
+  width: 96.5%;
+  opacity: 0;
+  transition: 2s ease;
+  background-color: black;
+}
+.container:hover .overlay {
+  opacity: 0.9;
+}
+
+.text-block {
+  /* .text-block is used for metadata information in bottom right of images */
+  font-size: 4px;
+  position: absolute;
+  bottom: 10px;
+  right: -150px;
+  background-color: #000000;
+  color: rgb(214, 126, 54);
+  padding-left: 10px;
+  padding-right: 10px;
+  opacity: 75%;
+  /*transition: width 2s, height 2s, background-color 2s, rotate 1.5s; for spinny spinny*/
+}
+
+.text-block:hover {
+  position: absolute;
+  rotate: 360deg;
+}
+
+p {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+i {
+  font-style: italic;
+}
+
+@media only screen and (max-width: 550px) {
+  h1 {
+    font-size: 34px;
+    line-height: 45px;
+  }
+}
+
+sup,
+sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub {
+  top: 0.4em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+main.gallery {
+  padding: 2rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+  text-align: center;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.photo:hover .overlay {
+  opacity: 1;
+}
+
+.text-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+.text-block p,
+.text-block {
+  margin: 0;
+  padding: 5px 0;
+}
+
+@media (max-width: 768px) {
+  div.wp-caption.thumb-caption {
+    height: 100% !important;
+    margin-bottom: 0 !important;
+    bottom: auto !important;
+    top: 0 !important;
+  }
+}
+
+#image-track > .image {
+  width: 50vmin;
+  height: 56vmin;
+  object-fit: scale-down;
+  object-position: 100% center;
+  overflow: hidden;
+  position: relative;
+}
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translate(0%, 1200px);
+}
+.Room {
+  transition: opacity 0.3s;
+}
+
+#lightbulb {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  z-index: 9999;
+}
+
+#lightbulb:hover {
+  opacity: 1;
+}
+
+/* Additional styles for the room entering animation */
+
+.Room.entered {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Navbar CSS code */
+.menu {
+  display: flex;
+  align-items: baseline;
+  padding: 0.1rem;
+  gap: 0.5rem;
+}
+/* .webgl{
+
+} */
+
+.Dcontainer {
+  margin: 0;
+}
+.canvas {
+  display: block;
+  width: 500px;
+  height: 70%;
+}
+mark {
+  color: white;
+  background-color: #f1e740;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.info h3,
+.info p {
+  margin: 0;
+  padding: 5px;
+}
+
+.image:hover .info {
+  opacity: 1;
+}
+
+.white {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: whitesmoke;
+}
